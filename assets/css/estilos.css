@@ -1,0 +1,148 @@
+body {
+  background-color: #f4f6f9;
+  padding-top: 56px;
+}
+
+/* Menú lateral */
+.sidebar {
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #dee2e6;
+  padding: 25px 15px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+}
+
+.sidebar .nav-link {
+  color: #374151;
+  font-weight: 500;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.sidebar .nav-link.disabled {
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.sidebar .nav-link i {
+  margin-right: 8px;
+}
+
+/* Contenido */
+.contenido-principal {
+  margin-left: 16.666667%;
+  padding: 25px;
+}
+
+.titulo-principal {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-principal {
+  border-left: 6px solid #1f2937;
+}
+
+.tarjeta-modulo {
+  min-height: 260px;
+  transition: 0.2s ease-in-out;
+}
+
+.tarjeta-modulo:hover {
+  transform: translateY(-4px);
+}
+
+.modulo-activo {
+  border: 2px solid #1f2937;
+}
+
+.icono-modulo {
+  font-size: 38px;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.tarjeta-resumen {
+  min-height: 150px;
+}
+
+.tarjeta-resumen h6 {
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.tarjeta-resumen h3 {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.icono-resumen {
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.tarjeta-funcion {
+  min-height: 260px;
+}
+
+.encabezado-seccion {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.encabezado-seccion h4 {
+  margin: 0;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #1f2937;
+  border-color: #1f2937;
+}
+
+.btn-primary:hover {
+  background-color: #111827;
+  border-color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .sidebar {
+    position: static;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .contenido-principal {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .encabezado-seccion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
