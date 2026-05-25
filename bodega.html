@@ -136,7 +136,7 @@
               <div class="card-body">
                 <i class="bi bi-building icono-resumen"></i>
                 <h6>Bodegas</h6>
-                <h3>0</h3>
+                <h3 id="bodegaCount">0</h3>
                 <small>HU-02</small>
               </div>
             </div>
@@ -283,6 +283,95 @@
 
         </section>
 
+        <!-- REGISTRO DE BODEGAS -->
+        <section class="row g-4 mb-4">
+
+          <div class="col-lg-5">
+            <div class="card tarjeta-funcion">
+              <div class="card-header encabezado-seccion">
+                <h4>
+                  <i class="bi bi-building-add"></i>
+                  Registrar Bodega
+                </h4>
+                <span class="badge bg-primary">HU-02</span>
+              </div>
+
+              <div class="card-body">
+                <p class="text-muted">
+                  Completa el formulario para registrar una nueva bodega con nombre y ubicación.
+                </p>
+
+                <form id="bodegaForm" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="bodegaNombre" class="form-label">Nombre de la bodega</label>
+                    <input type="text" class="form-control" id="bodegaNombre" placeholder="Ej. Bodega Central" required>
+                    <div class="invalid-feedback">
+                      El nombre de la bodega es obligatorio.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="bodegaUbicacion" class="form-label">Ubicación</label>
+                    <input type="text" class="form-control" id="bodegaUbicacion" placeholder="Ej. Av. Principal 123" required>
+                    <div class="invalid-feedback">
+                      La ubicación es obligatoria.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="bodegaEstado" class="form-label">Estado</label>
+                    <select id="bodegaEstado" class="form-select">
+                      <option value="Activo">Activo</option>
+                      <option value="Inactivo">Inactivo</option>
+                    </select>
+                  </div>
+
+                  <button class="btn btn-primary w-100" type="submit">
+                    Guardar bodega
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="card tarjeta-funcion">
+              <div class="card-header encabezado-seccion">
+                <h4>
+                  <i class="bi bi-list-ul"></i>
+                  Bodegas registradas
+                </h4>
+              </div>
+
+              <div class="card-body">
+                <p class="text-muted">
+                  Visualiza aquí las bodegas registradas y verifica su ubicación y estado.
+                </p>
+
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover align-middle">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Ubicación</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody id="bodegaTableBody">
+                      <tr>
+                        <td colspan="3" class="text-center text-muted">
+                          No hay bodegas registradas.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
         <!-- STOCK -->
         <section class="mt-4">
           <div class="card">
@@ -332,6 +421,7 @@
           <small>
             Integrantes: Marcelo Moyano y Joaquín Ulloa
           </small>
+          <p>&copy; 2026 Todos los derechos reservados.</p>
         </footer>
 
       </main>
